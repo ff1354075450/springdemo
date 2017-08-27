@@ -1,0 +1,25 @@
+# 数据库初始化脚本
+
+CREATE DATABASE demo;
+USE  demo;
+
+CREATE TABLE student
+(
+  sid INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT '学生的唯一id',
+  sname VARCHAR(20) NOT NULL COMMENT '学生姓名',
+  sage TIMESTAMP NOT NULL COMMENT '学生出生日期',
+  ssex VARCHAR(4) NOT NULL DEFAULT '男',
+  create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  KEY index_name(sname)
+)ENGINE=InnoDB DEFAULT  CHARSET=utf8 COMMENT '学生表';
+
+<!-- 插入数据-->
+INSERT INTO `student` VALUES (02, '钱电', '1990-12-21 00:00:00', '男', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (03, '孙风', '1990-12-21 00:00:00', '男', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (04, '李云', '1990-12-21 00:00:00', '男', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (05, '周梅', '1991-12-01 00:00:00', '女', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (06, '吴兰', '1992-03-01 00:00:00', '女', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (07, '郑竹', '1989-07-01 00:00:00', '女', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (08, '王菊', '1990-01-20 00:00:00', '女', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (09, '孙吴昊', '1990-01-20 00:00:00', '女', '1990-12-21 00:00:00');
+INSERT INTO `student` VALUES (10, '赵雷', '1990-01-20 00:00:00', '女', '1990-12-21 00:00:00');
