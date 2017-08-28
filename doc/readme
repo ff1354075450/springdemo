@@ -1,0 +1,15 @@
+##dao
+    主要是一些
+##service
+    service接口和实现类
+    站在使用者的角度去设计接口
+
+##exception
+    存放service所需要的异常，即业务逻辑异常
+##dto
+    存储数据，web和service之间的数据传递,service返回特定类型数据给web层
+##entity
+    用来存放一些数据，存放具体的业务数据
+##enums
+    使用枚举表示我们的常量数据字典
+    注意不要使用json转换枚举类型，会有问题
