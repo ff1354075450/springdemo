@@ -24,7 +24,7 @@ public class StudentServiceImpl implements StudentService {
 
     //注入service依赖
     @Autowired//@Resource,@Inject 都是可以的，autowired表示自动注入，不需要自己new实现类
-    private StudentDao studentDao;//无需初始化
+    private StudentDao studentDao;//无需初始化，如果报错请添加myBatis plugin插件，注意不是free myBatis plugin插件
 
     public List<Student> getStudent() {
         return studentDao.queryAll(0,4);
